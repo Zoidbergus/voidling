@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
-from Adafruit_PWM_Servo_Driver import PWM
+from src.servos.lib.Adafruit_PWM_Servo_Driver import PWM
+
 #from angles import point2anglesLR, point2pwm
 import time
 import RPi.GPIO as GPIO

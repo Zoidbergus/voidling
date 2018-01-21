@@ -1,4 +1,4 @@
-from angles import point2angles, point2pwmLF, point2pwmRF, point2pwmLB, point2pwmRB
+from src.servos.computing.angles import point2pwmLF, point2pwmRF, point2pwmLB, point2pwmRB
 import time
 
 
@@ -8,6 +8,7 @@ y = -2
 z = 22
 
 start = time.time()
+
 
 for huehue in range(12, 13):
     a,b,c = point2pwmLF(x,y,z)

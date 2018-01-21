@@ -1,6 +1,6 @@
 from math import floor
-from Adafruit_PWM_Servo_Driver import PWM
-from angles import point2pwmLF, point2pwmRF
+from lib.Adafruit_PWM_Servo_Driver import PWM
+from src.servos.computing.angles import point2pwmLF, point2pwmRF
 import time
 
 pwm = PWM(0x70)
