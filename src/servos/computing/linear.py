@@ -1,7 +1,12 @@
 from math import floor
-from lib.Adafruit_PWM_Servo_Driver import PWM
+from src.servos.lib.Adafruit_PWM_Servo_Driver import PWM
 from src.servos.computing.angles import point2pwmLF, point2pwmRF
 import time
+
+# linear.py
+# defines linear movement
+
+# TODO: isolate functions, make test file to use them, remove time.sleep .. LEARN PYTHON THREADING
 
 pwm = PWM(0x70)
 

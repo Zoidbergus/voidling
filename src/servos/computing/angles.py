@@ -1,6 +1,6 @@
-# python script to return hand angles
-
 from math import atan, acos, sqrt, pi, degrees
+
+# python script to return leg angles
 
 # point2angles(int px, int py, int pz)
 # enter point in real space to be reached, returns angles
@@ -8,8 +8,6 @@ from math import atan, acos, sqrt, pi, degrees
 # f1a - leg lift, joint near the leg holding bol)
 # f2a - leg stretch, joint at the end of the leg
 
-# TODO: define functions to be used: point2angles, correct_angles
-# TODO: make a function to correct angles/ratios
 # TODO: think about how to program better function to compute the legs
 # TODO: make a test on angles (after you get PWM working)
 

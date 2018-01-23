@@ -4,6 +4,8 @@ from src.servos.lib.Adafruit_PWM_Servo_Driver import PWM
 import time
 import RPi.GPIO as GPIO
 
+# TODO: make it manual - choose channel, then pwm
+
 # ===========================================================================
 # Example Code
 # ===========================================================================

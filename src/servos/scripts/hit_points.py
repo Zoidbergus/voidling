@@ -5,7 +5,7 @@ from src.servos.computing.angles import point2pwm
 import time
 import RPi.GPIO as GPIO
 
-
+# Hits defined points
 # ===========================================================================
 # Example Code
 # ===========================================================================

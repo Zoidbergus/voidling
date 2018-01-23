@@ -1,5 +1,7 @@
 from src.servos.computing.angles import point2angles
 
+# left front leg control functions
+
 
 def point2pwm_lf(px, py, pz):
     f0a, f1a, f2a = point2angles(px, py, pz)
