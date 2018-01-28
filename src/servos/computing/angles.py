@@ -16,7 +16,11 @@ def point2angles(px, py, pz):
     l1 = 8.5
     l2 = 12
     l3 = 17
+    is_px_negative = False
     if px != 0:
+        if px < 0:
+            px = -px
+            is_px_negative = True
         f0 = atan(pz / px)
         xn = sqrt(px*px + pz*pz)
     else:
@@ -31,15 +35,13 @@ def point2angles(px, py, pz):
     g = acos(((xn2*xn2)+(py*py)+(l2*l2)-(l3*l3))/(2*l2*(sqrt((xn2*xn2)+(py*py)))))
     f1c = f1 + 2*g
     f2c = -f2
-    if f0 < 0:
-        f0 = -f0
-    elif f0 > 0:
-        f0 = (pi/2) + ((pi/2) - f0)
     f1a = pi - f1c
     f2a = b
     f0a = degrees(f0)
     f1a = degrees(f1a)
     f2a = degrees(f2a)
+    if not is_px_negative:
+        f0a = 180 - f0a
 
     return f0a, f1a, f2a
 

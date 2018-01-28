@@ -1,15 +1,9 @@
-from src.servos.computing.angles import point2angles
-
+from src.servos.computing.pwm import point2pwm
 # right front leg control functions
 
 
 def point2pwm_rf(px, py, pz):
-    f0a, f1a, f2a = point2angles(px, py, pz)
-
-    # correction of ratios - servo turn and joint turn
-    pw1 = round((f0a - 196.63) / (-0.3521))
-    pw2 = round((f1a - 179.36) / (-0.185))
-    pw3 = round((f2a - 151.6) / (-0.312))
+    pw1, pw2, pw3 = point2pwm(px, py, pz)
 
     # inverted leg
     pw1 = (300 - pw1) + 300
