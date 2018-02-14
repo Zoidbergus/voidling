@@ -1,6 +1,22 @@
 from src.servos.computing.pwm import point2pwm
+import threading
+import time
 
 # left front leg control functions
+
+
+class LeftFrontLeg(threading.Thread):
+    # chodia mu pwm a on ich robi
+
+    def run(self):
+        print("hi there")
+        time.sleep(3)
+        print("hi there again")
+        LeftFrontLeg.fire(self)
+
+    def fire(self):
+        time.sleep(4)
+        print("fire")
 
 
 def point2pwm_lf(px, py, pz):
