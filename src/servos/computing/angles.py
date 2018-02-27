@@ -8,9 +8,6 @@ from math import atan, acos, sqrt, pi, degrees
 # f1a - leg lift, joint near the leg holding bol)
 # f2a - leg stretch, joint at the end of the leg
 
-# TODO: think about how to program better function to compute the legs
-# TODO: make a test on angles (after you get PWM working)
-
 
 def point2angles(px, py, pz):
     l1 = 8.5

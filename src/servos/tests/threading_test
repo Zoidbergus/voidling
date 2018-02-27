@@ -2,7 +2,6 @@ import threading
 import time
 
 # TODO: kazda noha je vlastny class
-# TODO: Thread safe lock
 
 
 class LeftLeg(threading.Thread):

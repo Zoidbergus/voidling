@@ -6,7 +6,7 @@ import time
 # linear.py
 # defines linear movement functions
 
-# TODO: isolate functions, make test file to use them, remove time.sleep .. LEARN PYTHON THREADING
+# TODO: isolate functions, make test file to use them
 
 
 def abs_distance(point_a, point_b):
@@ -46,39 +46,6 @@ def speed2delay(speed):
     delay = (round(delay))/1000
     return delay
 
-
-def linearMoveLF(servo1, servo2, servo3, p1, p2, speed):
-    dx,dy,dz = abs_distance(p1, p2)
-#    print "dx: ", dx,"dy: ", dy, "dz: ", dz
-    s = steps_count(dx, dy, dz)
-    d = speed2delay(speed)
-    npx = p1[0]
-    npy = p1[1]
-    npz = p1[2]
-#    print dx, " ", dy, " ", dz
-    for i in range(0, s):
-        if p1[0] < p2[0]:
-            npx = p1[0] + (float(dx)/s)*i
-        elif p1[0] > p2[0]:
-            npx = p1[0] - (float(dx)/s)*i
-        if p1[1] < p2[1]:
-            npy = p1[1] + (float(dy)/s)*i
-        elif p1[1] > p2[1]:
-            npy = p1[1] - (float(dy)/s)*i
-        if p1[2] < p2[2]:
-            npz = p1[2] + (float(dz)/s)*i
-        elif p1[2] > p2[2]:
-            npz = p1[2] - (float(dz)/s)*i
-
-        npx = round(npx, 2)
-        npy = round(npy, 2)
-        npz = round(npz, 2)
-        #print "x: ", npx, " y: ", npy, " z: ", npz
-        newPoint = [npx, npy, npz]
-        point2moveLF(newPoint, servo1, servo2, servo3)
-        time.sleep(d)
-    point2moveLF(p2, servo1, servo2, servo3)
-    return 0
 
 
 

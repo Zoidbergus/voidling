@@ -2,8 +2,6 @@
 import threading
 import time
 
-# TODO: kazda noha je vlastny class
-# TODO: Thread safe lock
 
 lock2 = threading.RLock()
 pwm = 0
@@ -30,6 +28,10 @@ class LeftLeg(threading.Thread):
             time.sleep(0.1)
             set_speed(0.1)
 
+    def move(self, poitn):
+        print("I have moved", poitn)
+        set_speed(5)
+
 
 class RightLeg(threading.Thread):
     def run(self):
@@ -47,6 +49,7 @@ if __name__ == "__main__":
     print("beginning")
     left = LeftLeg()
     right = RightLeg()
+    left.move(123)
     left.start()
     right.start()
 

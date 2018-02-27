@@ -1,5 +1,10 @@
 from src.servos.computing.pwm import point2pwm
+import threading
 # right front leg control functions
+
+
+class RightFrontLeg(threading.Thread):
+    print()
 
 
 def point2pwm_rf(px, py, pz):
